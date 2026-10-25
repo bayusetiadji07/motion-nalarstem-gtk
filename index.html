@@ -399,6 +399,12 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 #auto.on{display:block}
 #stage.nocursor{cursor:none}
 @media print{#help,#notes{display:none}}
+/* mode cetak (?cetak): keadaan akhir tiap slide tanpa gerak, dipakai untuk ekspor PowerPoint */
+.cetak *,.cetak *:before,.cetak *:after{animation:none!important;transition:none!important}
+.cetak #help,.cetak .bub{display:none}
+.cetak .lap .rkt{offset-distance:100%}
+.cetak .lap .jejak{stroke-dashoffset:0}
+.cetak .end .rk{transform:translate(120px,-420px) rotate(18deg)}
 </style>
 </head>
 <body>
@@ -671,7 +677,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   <section class="sl div" data-star="R" data-chrome="dark" data-wipe data-notes="Masuk ke bagian Refleksi dan Dampak.">
     <div class="ph a" style="--d:.5s"><img src="assets/refleksi.jpg" alt=""></div>
     <div class="big a pop" style="--d:.7s">R</div>
-    <h2 class="a lf" style="--d:1s">Refleksi &amp; Dampak</h2>
+    <h2 class="a lf" style="--d:1s;font-size:74px;top:500px">Refleksi &amp; Dampak</h2>
     <p class="a up" style="--d:1.3s">Apa yang berubah pada murid, guru, dan rekan sejawat.</p>
     <div class="dots a up" style="--d:1.6s"><span>S</span><span>T</span><span>A</span><span class="on">R</span></div>
   </section>
@@ -889,8 +895,15 @@ function hitung(el,ms){
   requestAnimationFrame(f);
 }
 
+const CETAK=/cetak/.test(location.search);
+if(CETAK) document.body.classList.add('cetak');
 function main(sl){
   sl.querySelectorAll('.a').forEach(a=>a.classList.add('in'));
+  if(CETAK){
+    sl.querySelectorAll('[data-count]').forEach(el=>{if(el.tagName==='B')el.textContent=el.dataset.count});
+    const b=sl.querySelector('#balas');if(b){sl.querySelector('#ngetik').style.display='none';b.textContent=b.dataset.chat}
+    return;
+  }
   sl.querySelectorAll('[data-type]').forEach(p=>{
     if(!p.dataset.html) p.dataset.html=p.innerHTML;
     // ketik teks polos, lalu kembalikan markup (tebal) di akhir
