@@ -399,6 +399,31 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 #auto.on{display:block}
 #stage.nocursor{cursor:none}
 @media print{#help,#notes{display:none}}
+/* ===== HOOK pembuka (layar gelap) ===== */
+.hook{background:radial-gradient(1200px 800px at 50% 40%,#0b2f2b 0%,#06201d 60%,#041513 100%);color:#fff}
+.hook p{position:absolute;left:180px;right:180px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.hook .hk-1{top:270px;font-size:80px;color:#E6F6F4}
+.hook .hk-2{top:560px;font-size:80px;color:#99E6DA}
+.hook .hk-2 b{color:var(--amber)}
+
+/* ===== HOOK demo langsung Kak Nala ===== */
+.demo .dm-kiri{position:absolute;left:110px;top:330px;width:1080px;display:flex;flex-direction:column;gap:24px}
+.dm-langkah{display:flex;gap:26px;align-items:center;background:#fff;border-radius:26px;padding:24px 30px;box-shadow:var(--shadow)}
+.dm-langkah b{display:block;font-size:30px;color:var(--teal)}
+.dm-langkah span{font-size:26px;line-height:1.4}
+.dm-cadangan{margin-top:6px;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.dm-bb{border-radius:24px;padding:18px 26px;font-size:25px;line-height:1.4;box-shadow:var(--shadow);max-width:1000px}
+.dm-bb small{display:block;font-size:16px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.dm-bb.m{background:var(--cream);align-self:flex-end}.dm-bb.m small{color:var(--amber2)}
+.dm-bb.k{background:#fff}.dm-bb.k small{color:var(--teal)}
+.demo.dm-putar .dm-langkah{display:none}
+.dm-tombol{order:-1;font:800 22px var(--sans);color:var(--teal3);background:var(--mint);border:2px solid var(--seafoam);border-radius:999px;padding:12px 26px;cursor:pointer}
+.dm-tombol kbd{font:inherit;background:#fff;border-radius:8px;padding:0 10px;margin-left:8px}
+.demo h2.tt{right:680px}
+.dm-hp{position:absolute;right:110px;top:110px;width:470px;height:900px;border-radius:56px;border:14px solid #0F172A;background:#fff;overflow:hidden;box-shadow:0 40px 80px -30px rgba(15,23,42,.5)}
+.dm-hp iframe{width:100%;height:100%;border:0;display:block;background:#F4F8F8}
+.dm-label{position:absolute;left:50%;bottom:-2px;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:17px;font-weight:700;padding:6px 16px;border-radius:999px 999px 0 0;white-space:nowrap}
+
 /* mode cetak (?cetak): keadaan akhir tiap slide tanpa gerak, dipakai untuk ekspor PowerPoint */
 .cetak *,.cetak *:before,.cetak *:after{animation:none!important;transition:none!important}
 .cetak #help,.cetak .bub{display:none}
@@ -411,8 +436,34 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 <div id="stage">
   <div class="amb" id="amb"></div>
 
+  <!-- 0a HOOK: pertanyaan pembuka (layar gelap) -->
+  <section class="sl hook" data-chrome="hide" data-dur="10" data-notes="[00:00 · 0:20] (Jangan perkenalkan diri dulu. Berdiri di tengah, tatap penonton.) &quot;Bapak dan Ibu… kapan terakhir kali murid kita bertanya…&quot; (tunggu baris kedua muncul) &quot;…bukan kepada kita, tetapi kepada AI?&quot; (diam 3 detik, biarkan penonton tersenyum)">
+    <p class="hk-1 a up" style="--d:.6s">Kapan terakhir kali murid kita bertanya…</p>
+    <p class="hk-2 a up" style="--d:2.6s">…bukan kepada kita, <b>tetapi kepada AI?</b></p>
+  </section>
+
+  <!-- 0b HOOK: demo langsung Kak Nala (NalarSTEM asli di dalam slide + rekaman cadangan) -->
+  <section class="sl demo" data-chrome="" data-dur="40" data-notes="[00:20 · 1:10] &quot;Saya yakin banyak dari kita tersenyum kecut. Murid saya juga begitu: mengetik soal, AI menjawab, mereka menyalin. Nilainya bagus, tapi nalarnya tidak tumbuh. Sekarang izinkan saya bertanya kepada AI buatan kami, sebagai murid yang malas.&quot; (Klik di layar HP pada slide → ketuk 🎤 → ucapkan:) &quot;Kak, langsung kasih tahu saja jawabannya dong. Berapa cuka yang paling pas?&quot; (Biarkan Kak Nala menjawab dengan suaranya. Setelah selesai, menoleh ke penonton:) &quot;Bapak dan Ibu dengar? Ia menolak. Bukan karena tidak tahu, tapi karena ia ingin murid saya berpikir. Inilah Kak Nala: AI yang bertanya balik.&quot; Rencana B (internet/AI bermasalah): klik tombol &quot;▶ Putar rekaman cadangan&quot; atau tekan D. Percakapan yang sama diputar dengan suara. Penting: setelah demo, klik area slide di luar HP agar tombol panah kembali berfungsi.">
+    <h2 class="tt a up"><small>Demo langsung</small>Coba kita minta jawaban<br>dari Kak Nala</h2>
+    <div class="dm-kiri">
+      <div class="dm-langkah a lf" style="--d:.5s"><span class="ic am" data-ic="msg"></span><div><b>Murid yang malas</b><span>“Kak, langsung kasih tahu saja jawabannya dong. Berapa cuka yang paling pas?”</span></div></div>
+      <div class="dm-langkah a lf" style="--d:.8s"><span class="ic" data-ic="bot"></span><div><b>Kak Nala menolak dengan ramah</b><span>…lalu bertanya balik dengan data uji murid sendiri.</span></div></div>
+      <div class="dm-cadangan a up" style="--d:1.1s">
+        <div class="dm-bb m" id="dmMurid" hidden><small>Murid</small>“Kak, langsung kasih tahu saja jawabannya dong. Berapa cuka yang paling pas?”</div>
+        <div class="dm-bb k" id="dmNala" hidden><small>Kak Nala</small><span id="dmNalaTeks"></span></div>
+        <button type="button" class="dm-tombol" id="dmPutar">▶ Putar rekaman cadangan <kbd>D</kbd></button>
+      </div>
+    </div>
+    <div class="dm-hp a zm" style="--d:.3s">
+      <iframe id="dmApp" title="NalarSTEM" allow="microphone; autoplay" data-src="https://nalarstem.logisains.my.id/?suara=perangkat#/beranda"></iframe>
+      <span class="dm-label">NalarSTEM asli · ketuk Kak Nala → 🎤</span>
+    </div>
+    <audio id="auMurid" src="assets/demo-murid.mp3" preload="auto"></audio>
+    <audio id="auNala" src="assets/demo-nala.mp3" preload="auto"></audio>
+  </section>
+
   <!-- 1 SAMPUL -->
-  <section class="sl cover" data-dur="10" data-chrome="hide" data-notes="Perkenalan singkat: nama, sekolah, dan judul praktik baik. Sampaikan bahwa praktik ini tentang mengubah AI dari mesin jawaban menjadi teman berpikir murid.">
+  <section class="sl cover" data-dur="10" data-chrome="hide" data-notes="[01:30 · 0:20] &quot;Saya Bayu Setiadji, guru IPA dari SMP Negeri 3 Besuki, Situbondo. Praktik baik saya: Penguatan Berpikir Kritis dan Partisipasi Murid melalui NalarSTEM berbasis AI Sokratis, Kak Nala.&quot;">
     <div class="bgimg a bl kb" style="--d:0s"><img src="assets/sampul.jpg" alt=""></div>
     <div class="shade"></div>
     <div class="box">
@@ -425,7 +476,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 2 INTI -->
-  <section class="sl" data-star="" data-notes="Satu kalimat yang ingin diingat juri: AI yang bertanya balik. Lalu tunjukkan alur STAR yang akan diikuti presentasi.">
+  <section class="sl" data-star="" data-notes="[01:50 · 0:30] &quot;Intinya satu: Kak Nala tidak pernah memberi jawaban. Ia bertanya balik dan menuntun murid sampai menemukan jawabannya sendiri. Ceritanya saya sampaikan dalam alur STAR: Situasi, Tantangan, Aksi, Refleksi.&quot;">
     <h2 class="tt a up"><small>Inti praktik baik ini</small>AI yang bertanya balik</h2>
     <div class="body">
       <div class="quote a cl" style="--d:.3s">
@@ -444,7 +495,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 3 S -->
-  <section class="sl div" data-star="S" data-chrome="dark" data-wipe data-notes="Masuk ke bagian Situasi: apa yang terjadi di sekolah dan di kelas saya.">
+  <section class="sl div" data-star="S" data-chrome="dark" data-wipe data-notes="[02:20 · 0:10] &quot;Situasinya: fasilitas teknologi kami sangat baik, tetapi kualitas pembelajaran justru menurun.&quot;">
     <div class="ph a" style="--d:.5s"><img src="assets/situasi.jpg" alt=""></div>
     <div class="big a pop" style="--d:.7s">S</div>
     <h2 class="a lf" style="--d:1s">Situasi</h2>
@@ -453,7 +504,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 4 RAPOR -->
-  <section class="sl s4" data-star="S" data-notes="Dua indikator yang seharusnya bisa dimaksimalkan guru justru turun: manajemen kelas dan metode pembelajaran. Tunjukkan tangkapan layar rapor.">
+  <section class="sl s4" data-star="S" data-notes="[02:30 · 0:40] &quot;Rapor Pendidikan 2025 sekolah kami menunjukkan dua indikator yang seharusnya bisa dimaksimalkan guru justru turun: manajemen kelas dan metode pembelajaran. Keduanya berkaitan. Metode yang tidak melibatkan murid membuat mereka kehilangan fokus, lalu kelas kurang tertib.&quot;">
     <h2 class="tt a up"><small>Rapor Pendidikan 2025</small>Kualitas pembelajaran turun</h2>
     <div class="body">
       <div class="left">
@@ -471,7 +522,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 5 REFLEKSI KELAS -->
-  <section class="sl s5" data-star="S" data-notes="Hasil observasi kelas sendiri. Tekankan poin terakhir: AI dipakai untuk menyalin, bukan berpikir. Inilah pemicu munculnya Kak Nala.">
+  <section class="sl s5" data-star="S" data-notes="[03:10 · 0:40] &quot;Di kelas IPA saya sendiri, murid hafal ciri perubahan kimia tetapi sulit mengaitkannya dengan kehidupan. Praktikum hanya mengikuti langkah. Yang berani bicara hanya beberapa. Dan yang paling mengusik saya: sebagian murid menyalin jawaban dari AI tanpa memahami.&quot;">
     <h2 class="tt a up"><small>Refleksi kelas IPA VII · materi perubahan materi</small>Apa yang terjadi di kelas saya</h2>
     <div class="body">
       <ul>
@@ -487,7 +538,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 6 KESENJANGAN -->
-  <section class="sl" data-star="S" data-notes="Bandingkan kelas saat ini dengan kelas ideal. Kesenjangan ini menjadi masalah utama.">
+  <section class="sl" data-star="S" data-notes="[03:50 · 0:30] &quot;Realitanya: nalar belum aktif, partisipasi tidak merata. Idealnya: setiap murid bertanya, menduga, menguji, dan menjelaskan dengan bukti. Jadi masalah yang saya cari solusinya: partisipasi dan berpikir kritis.&quot;">
     <h2 class="tt a up"><small>Situasi</small>Kesenjangan realita dan idealita</h2>
     <div class="body">
       <div class="gap">
@@ -502,7 +553,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 7 T -->
-  <section class="sl div" data-star="T" data-chrome="dark" data-wipe data-notes="Masuk ke bagian Tantangan.">
+  <section class="sl div" data-star="T" data-chrome="dark" data-wipe data-notes="[04:20 · 0:10] &quot;Ada tiga tantangan yang harus saya jawab.&quot;">
     <div class="ph a" style="--d:.5s"><img src="assets/tantangan.jpg" alt=""></div>
     <div class="big a pop" style="--d:.7s">T</div>
     <h2 class="a lf" style="--d:1s">Tantangan</h2>
@@ -511,7 +562,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 8 TIGA TANTANGAN -->
-  <section class="sl" data-star="T" data-notes="Tantangan ketiga paling khas: membuat AI yang justru bertanya balik.">
+  <section class="sl" data-star="T" data-notes="[04:30 · 0:50] &quot;Pertama, mengubah kelas dari menjelaskan menjadi menyelidiki. Kedua, 32 murid harus terlibat, bukan sekadar hadir, padahal tidak mungkin saya dampingi satu per satu. Ketiga, dan ini yang paling khas: saya butuh AI yang bertanya balik, bukan AI yang membuat murid malas berpikir.&quot;">
     <h2 class="tt a up"><small>Tantangan</small>Tiga tantangan</h2>
     <div class="body">
       <div class="tg">
@@ -523,7 +574,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 9 A -->
-  <section class="sl div" data-star="A" data-chrome="dark" data-wipe data-notes="Masuk ke bagian Aksi.">
+  <section class="sl div" data-star="A" data-chrome="dark" data-wipe data-notes="[05:20 · 0:10] &quot;Inilah aksi yang saya lakukan.&quot;">
     <div class="ph a" style="--d:.5s"><img src="assets/aksi.jpg" alt=""></div>
     <div class="big a pop" style="--d:.7s">A</div>
     <h2 class="a lf" style="--d:1s">Aksi</h2>
@@ -532,7 +583,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 10 LIMA LANGKAH -->
-  <section class="sl" data-star="A" data-notes="Peta lima langkah aksi. Setiap langkah dibahas di slide berikutnya.">
+  <section class="sl" data-star="A" data-notes="[05:30 · 0:30] &quot;Lima langkah: memilih pendekatan STEM, mengembangkan NalarSTEM, menerapkannya di kelas lewat misi roket, mengelola kelas dengan data, lalu berbagi kepada rekan guru.&quot;">
     <h2 class="tt a up"><small>Aksi</small>Lima langkah aksi</h2>
     <div class="body">
       <div class="tl"><div class="ln"><i></i></div></div>
@@ -547,7 +598,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 11 AKSI 1 -->
-  <section class="sl s11" data-star="A" data-notes="STEM membuat pembelajaran interaktif dengan sendirinya: murid merancang, menguji, melihat hasil, lalu memperbaiki.">
+  <section class="sl s11" data-star="A" data-notes="[06:00 · 0:40] &quot;Dengan STEM, IPA tidak lagi kumpulan fakta untuk dihafal, tetapi alat memecahkan masalah nyata. Murid merancang, menguji, melihat hasil, lalu memperbaiki. Pembelajaran menjadi interaktif dengan sendirinya.&quot;">
     <h2 class="tt a up"><small>Aksi 1</small>Dari menjelaskan menjadi menyelidiki</h2>
     <div class="body">
       <div class="ba">
@@ -566,7 +617,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 12 AKSI 2 -->
-  <section class="sl s12" data-star="A" data-notes="Tekankan pembagian peran: guru tetap perancang pedagogi, AI hanya membantu menulis kode.">
+  <section class="sl s12" data-star="A" data-notes="[06:40 · 0:40] &quot;NalarSTEM dibuka di HP tanpa instalasi. Saya menjadi perancang pedagoginya: masalah, alur belajar, isi misi, dan aturan perilaku Kak Nala. Asisten AI membantu menulis kodenya, dan setiap hasil saya uji serta perbaiki sesuai kebutuhan kelas.&quot;">
     <h2 class="tt a up"><small>Aksi 2</small>Mengembangkan NalarSTEM</h2>
     <div class="body">
       <div class="kol">
@@ -581,7 +632,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 13 KAK NALA -->
-  <section class="sl" data-star="A" data-dur="13" data-notes="Peragakan contoh percakapan. Bila memungkinkan, tunjukkan langsung Kak Nala di aplikasi.">
+  <section class="sl" data-star="A" data-dur="13" data-notes="[07:20 · 0:50] &quot;Tadi Bapak dan Ibu sudah mendengar sendiri. Kak Nala tidak menyebut angka. Ia membaca data uji murid, lalu menuntun dengan pertanyaan: 'Bahan mana yang habis lebih dulu?' Nalar Aktif Lewat Ajakan bertanya. Mesinnya Gemini dari Google, tetapi diatur agar tidak pernah memberi jawaban.&quot;">
     <h2 class="tt a up"><small>Aksi 2 · Jantung NalarSTEM</small>Kak Nala: AI yang bertanya balik</h2>
     <div class="body">
       <div class="chat a zm" style="--d:.2s">
@@ -605,7 +656,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 14 TUJUH LANGKAH -->
-  <section class="sl" data-star="A" data-notes="Tujuh langkah memadukan siklus rekayasa dan keterampilan proses sains. Langkah 4 berlangsung di laboratorium maya.">
+  <section class="sl" data-star="A" data-notes="[08:10 · 0:40] &quot;Setiap misi punya tujuh langkah, dari memahami masalah, menggali konsep, menyusun hipotesis, merancang dan menguji di laboratorium maya, menganalisis, menyimpulkan, sampai mewujudkannya di dunia nyata.&quot;">
     <h2 class="tt a up"><small>Alur belajar</small>Tujuh langkah belajar di NalarSTEM</h2>
     <div class="body">
       <div class="tj" id="tj"><div class="ln"><i></i></div></div>
@@ -618,7 +669,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 15 MISI ROKET -->
-  <section class="sl s15" data-star="A" data-dur="12" data-notes="Murid melewati tujuh langkah: identifikasi masalah, gali konsep, hipotesis, uji di lab maya, analisis, refleksi, lalu wujudkan di lapangan.">
+  <section class="sl s15" data-star="A" data-dur="12" data-notes="[08:50 · 1:00] &quot;Contohnya misi roket: luncurkan roket botol agar mendarat di zona 15 sampai 25 meter, hemat bahan dan aman. Murid harus memahami bahwa cuka dan soda kue menghasilkan gas karbon dioksida, dan bahan yang habis lebih dulu menentukan banyaknya gas. Mereka menguji berkali-kali di laboratorium maya, lalu meluncurkannya sungguhan di lapangan. Fokusnya proses berpikir, bukan sekadar roketnya berhasil.&quot;">
     <h2 class="tt a up"><small>Aksi 3</small>Misi Roket Cuka &amp; Soda Kue</h2>
     <div class="body">
       <div class="mas a lf" style="--d:.3s"><b>Masalah:</b> luncurkan roket botol agar mendarat <b>15–25 m</b>, hemat bahan dan aman.</div>
@@ -641,7 +692,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 16 AKSI 4 -->
-  <section class="sl s16" data-star="A" data-notes="Data mengubah cara mengelola kelas: guru tahu siapa yang belum terlibat dan mendatanginya lebih dulu.">
+  <section class="sl s16" data-star="A" data-notes="[09:50 · 0:45] &quot;Sekarang saya tidak lagi menebak siapa yang belum terlibat. Peta Jejak Berpikir menunjukkan siapa yang menguji dengan teratur, siapa yang masih coba-coba, dan siapa yang perlu disapa lebih dulu. Inilah disiplin positif: keteraturan yang tumbuh dari keterlibatan.&quot;">
     <h2 class="tt a up"><small>Aksi 4</small>Mengelola kelas dengan data</h2>
     <div class="body">
       <div class="stp">
@@ -655,7 +706,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 17 AKSI 5 -->
-  <section class="sl s17" data-star="A" data-notes="Bersama rekan guru dan MGMP, kami mempelajari cara menjalankan NalarSTEM dan menyesuaikannya dengan karakter murid dan mapel lain.">
+  <section class="sl s17" data-star="A" data-notes="[10:35 · 0:35] &quot;Praktik ini saya bagikan kepada rekan sejawat dan MGMP IPA Kabupaten Situbondo. NalarSTEM gratis, bisa diakses di mana saja, dan tetap berjalan saat sinyal lemah.&quot;">
     <h2 class="tt a up"><small>Aksi 5</small>Berbagi kepada rekan guru</h2>
     <div class="body">
       <div class="rk2">
@@ -674,7 +725,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 18 R -->
-  <section class="sl div" data-star="R" data-chrome="dark" data-wipe data-notes="Masuk ke bagian Refleksi dan Dampak.">
+  <section class="sl div" data-star="R" data-chrome="dark" data-wipe data-notes="[11:10 · 0:10] &quot;Lalu, apa yang berubah?&quot;">
     <div class="ph a" style="--d:.5s"><img src="assets/refleksi.jpg" alt=""></div>
     <div class="big a pop" style="--d:.7s">R</div>
     <h2 class="a lf" style="--d:1s;font-size:74px;top:500px">Refleksi &amp; Dampak</h2>
@@ -683,7 +734,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 19 DAMPAK -->
-  <section class="sl s19" data-star="R" data-notes="Ceritakan dampak dengan contoh nyata dari Peta Jejak, misalnya murid yang melanjutkan rancangan roket di rumah.">
+  <section class="sl s19" data-star="R" data-notes="[11:20 · 0:45] &quot;Murid terlatih berpikir kritis dan partisipasinya terekam di Peta Jejak. Saya sebagai guru bisa mendampingi lebih tepat sasaran, bahkan saat murid melanjutkan di rumah, dan merefleksi berdasarkan data, bukan perasaan. Rekan guru pun terinspirasi membuat media sesuai kebutuhan muridnya.&quot;">
     <h2 class="tt a up"><small>Refleksi &amp; Dampak</small>Dampak yang terlihat</h2>
     <div class="body">
       <div class="grp">
@@ -696,7 +747,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 20 ANGKET -->
-  <section class="sl s20" data-star="R" data-dur="11" data-notes="Bacakan angka dari grafik angket: rata-rata sebelum dan sesudah untuk partisipasi dan kebiasaan berpikir kritis.">
+  <section class="sl s20" data-star="R" data-dur="11" data-notes="[12:05 · 0:50] &quot;Hasilnya di kelas 7D: rata-rata tes naik dari 41 menjadi 83. Angket murid menunjukkan partisipasi dan kebiasaan berpikir kritis sama-sama naik, dan murid menilai aplikasinya baik.&quot; (jeda 2 detik setelah menyebut 41 → 83)">
     <h2 class="tt a up"><small>Refleksi &amp; Dampak</small>Angket murid kelas 7D: sebelum dan sesudah</h2>
     <div class="body">
       <div class="card chart a zm" style="--d:.2s">
@@ -716,7 +767,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 21 FAKTOR & KENDALA -->
-  <section class="sl" data-star="R" data-notes="Jujur tentang kendala: internet dan batas API gratis. Sampaikan juga solusi memori offline yang dikurasi guru.">
+  <section class="sl" data-star="R" data-notes="[12:55 · 0:35] &quot;Kunci keberhasilannya: AI dijadikan rekan berpikir, bukan mesin pencari jawaban. Kendalanya jujur saya akui: Kak Nala paling optimal dengan internet, dan kuota Gemini gratis terbatas. Karena itu kami siapkan memori yang dikurasi guru agar tetap berjalan saat AI tidak tersedia.&quot;">
     <h2 class="tt a up"><small>Refleksi &amp; Dampak</small>Faktor keberhasilan dan kendala</h2>
     <div class="body">
       <div class="fk2">
@@ -731,7 +782,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 22 TUT WURI -->
-  <section class="sl s22" data-star="R" data-notes="Filosofi yang mendasari seluruh praktik.">
+  <section class="sl s22" data-star="R" data-notes="[13:30 · 0:30] &quot;Filosofinya sederhana: tut wuri handayani di zaman AI. Murid berjalan di depan dengan nalarnya sendiri, sedangkan guru dan teknologi mendorong dari belakang sambil memberi arah.&quot;">
     <div class="q a pop" style="--d:.2s">“</div>
     <h2 class="a up" style="--d:.5s"><b>Tut wuri handayani</b><br>di zaman AI</h2>
     <p data-type="1300">Murid berjalan di depan dengan nalarnya sendiri, sedangkan guru dan teknologi mendorong dari belakang sambil memberi arah.</p>
@@ -741,7 +792,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 23 PENUTUP -->
-  <section class="sl end" data-chrome="hide" data-dur="14" data-notes="Tutup dengan kalimat kunci, lalu persilakan juri memindai QR untuk mencoba NalarSTEM.">
+  <section class="sl end" data-chrome="hide" data-dur="14" data-notes="[14:00 · 0:45] &quot;Bapak dan Ibu, di awal tadi saya bertanya: kapan terakhir kali murid kita bertanya kepada AI? Mulai hari ini, semoga pertanyaannya berubah: kapan terakhir kali AI membuat murid kita bertanya balik? Ketika semua murid sibuk berpikir, kelas pun menjadi lebih tertib dengan sendirinya. NalarSTEM gratis, silakan pindai kodenya dan coba besok pagi di kelas Bapak dan Ibu. Terima kasih.&quot; (senyum, diam, tunggu tepuk tangan) Selesai ± 14:45">
     <div class="sky a bl"><img src="assets/langit.jpg" alt=""></div>
     <div class="asap"><i></i><i></i><i></i></div>
     <img class="rk" src="assets/roket.png" alt="">
@@ -882,7 +933,7 @@ const notes=document.getElementById('notes'),wipe=document.getElementById('wipe'
 let cur=-1,timers=[],autoT=null;
 
 function later(fn,ms){timers.push(setTimeout(fn,ms))}
-function bersihkan(){timers.forEach(clearTimeout);timers=[]}
+function bersihkan(){timers.forEach(clearTimeout);timers=[];hentiCadangan()}
 
 function ketik(el,teks,ms,cepat){
   el.textContent='';el.classList.add('caret');let i=0;
@@ -899,6 +950,8 @@ const CETAK=/cetak/.test(location.search);
 if(CETAK) document.body.classList.add('cetak');
 function main(sl){
   sl.querySelectorAll('.a').forEach(a=>a.classList.add('in'));
+  // slide demo: muat NalarSTEM asli hanya saat slide ini dibuka (hemat internet di awal presentasi)
+  const app=sl.querySelector('#dmApp');if(app&&!app.src)app.src=app.dataset.src;
   if(CETAK){
     sl.querySelectorAll('[data-count]').forEach(el=>{if(el.tagName==='B')el.textContent=el.dataset.count});
     const b=sl.querySelector('#balas');if(b){sl.querySelector('#ngetik').style.display='none';b.textContent=b.dataset.chat}
@@ -919,6 +972,7 @@ function main(sl){
   }
 }
 function reset(sl){
+  sl.querySelectorAll('.dm-bb').forEach(b=>b.hidden=true);sl.classList.remove('dm-putar');
   sl.querySelectorAll('.a').forEach(a=>a.classList.remove('in'));
   sl.querySelectorAll('[data-type]').forEach(p=>{if(p.dataset.html){p.innerHTML=p.dataset.html;p.classList.remove('caret')}});
 }
@@ -949,6 +1003,30 @@ function go(n,dari){
 }
 const next=()=>go(cur+1),prev=()=>go(cur-1);
 
+// Rekaman cadangan demo (rencana B bila internet/AI bermasalah): murid bertanya, lalu Kak Nala menjawab
+const auM=document.getElementById('auMurid'),auN=document.getElementById('auNala');
+const TEKS_NALA='“Hmm, Kak Nala tahu kamu ingin cepat selesai. Tapi kalau Kak Nala yang menjawab, nalarmu tidak ikut tumbuh. Coba lihat datamu: di uji kedua, kamu menambah soda kue, tetapi gasnya hampir tidak bertambah. Menurutmu, bahan mana yang habis lebih dulu?”';
+let ketikNala=null;
+function hentiCadangan(){[auM,auN].forEach(a=>{if(a){a.pause();a.currentTime=0}});clearInterval(ketikNala)}
+function putarCadangan(){
+  if(!S[cur]||!S[cur].classList.contains('demo'))return;
+  hentiCadangan();
+  const bm=document.getElementById('dmMurid'),bn=document.getElementById('dmNala'),tn=document.getElementById('dmNalaTeks');
+  S[cur].classList.add('dm-putar');
+  bm.hidden=false;bn.hidden=true;tn.textContent='';
+  auM.onended=()=>{
+    bn.hidden=false;let i=0;
+    auN.play().catch(()=>{});
+    // teks muncul mengikuti suara (± durasi audio)
+    const per=Math.max(25,((auN.duration||20)*1000)/TEKS_NALA.length);
+    ketikNala=setInterval(()=>{tn.textContent=TEKS_NALA.slice(0,++i);if(i>=TEKS_NALA.length)clearInterval(ketikNala)},per);
+  };
+  auM.play().catch(()=>{});
+}
+const tombolCadangan=document.getElementById('dmPutar');
+tombolCadangan.addEventListener('click',e=>{e.stopPropagation();putarCadangan()});
+document.querySelector('.dm-hp').addEventListener('click',e=>e.stopPropagation());
+
 function jadwalAuto(){clearTimeout(autoT);autoT=setTimeout(()=>{if(cur<S.length-1)next();else toggleAuto()},(+S[cur].dataset.dur||9)*1000)}
 function toggleAuto(){
   if(autoT){clearTimeout(autoT);autoT=null}else jadwalAuto();
@@ -963,6 +1041,7 @@ addEventListener('keydown',e=>{
   else if(k==='f'||k==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
   else if(k==='a'||k==='A')toggleAuto();
   else if(k==='n'||k==='N')notes.classList.toggle('on');
+  else if(k==='d'||k==='D')putarCadangan();
   else if(k==='r'||k==='R'){const c=S[cur];bersihkan();reset(c);void c.offsetWidth;later(()=>main(c),60)}
 });
 stage.addEventListener('click',e=>{(e.clientX<innerWidth*0.25)?prev():next()});
