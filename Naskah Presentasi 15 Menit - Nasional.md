@@ -1,10 +1,10 @@
 # Naskah Presentasi Nasional — NalarSTEM & Kak Nala (15 menit)
 
 Bayu Setiadji, S.Pd., Gr. · SMP Negeri 3 Besuki, Situbondo
-Slide: `motion-nalarstem-gtk/index.html` (25 slide). Tekan **N** untuk menampilkan naskah ini di bawah layar, **F** layar penuh, **←/→** pindah slide.
+Slide: `motion-nalarstem-gtk/index.html` (26 slide). Tekan **N** untuk menampilkan naskah ini di bawah layar, **F** layar penuh, **←/→** pindah slide.
 
 **Kalimat kunci yang diulang:** *"AI yang bertanya balik."*
-**Total rencana: ± 14 menit 45 detik** (cadangan 15 detik untuk tepuk tangan/jeda).
+**Total rencana: ± 14 menit 55 detik** (cadangan 5 detik untuk tepuk tangan/jeda).
 
 ---
 
@@ -60,7 +60,7 @@ Slide: `motion-nalarstem-gtk/index.html` (25 slide). Tekan **N** untuk menampilk
 
 ---
 
-## AKSI (± 5 menit 45 detik)
+## AKSI (± 5 menit 35 detik)
 
 ### Slide 11 — Pembatas A · 0:10 · *[05:20]*
 > "Inilah aksi yang saya lakukan."
@@ -86,40 +86,44 @@ Slide: `motion-nalarstem-gtk/index.html` (25 slide). Tekan **N** untuk menampilk
 ### Slide 18 — Aksi 4: Mengelola kelas dengan data · 0:45 · *[09:50]*
 > "Sekarang saya tidak lagi menebak siapa yang belum terlibat. Peta Jejak Berpikir menunjukkan siapa yang menguji dengan teratur, siapa yang masih coba-coba, dan siapa yang perlu disapa lebih dulu. Inilah disiplin positif: keteraturan yang tumbuh dari keterlibatan."
 
-### Slide 19 — Aksi 5: Berbagi · 0:35 · *[10:35]*
-> "Praktik ini saya bagikan kepada rekan sejawat dan MGMP IPA Kabupaten Situbondo. NalarSTEM gratis, bisa diakses di mana saja, dan tetap berjalan saat sinyal lemah."
+### Slide 19 — Aksi 5: Berbagi · 0:25 · *[10:35]*
+> "Praktik ini saya bagikan kepada rekan sejawat dan MGMP IPA Kabupaten Situbondo. NalarSTEM gratis dan tetap berjalan saat sinyal lemah."
 
 ---
 
-## REFLEKSI & DAMPAK (± 2 menit 50 detik)
+## REFLEKSI & DAMPAK (± 3 menit 10 detik)
 
-### Slide 20 — Pembatas R · 0:10 · *[11:10]*
+### Slide 20 — Pembatas R · 0:10 · *[11:00]*
 > "Lalu, apa yang berubah?"
 
-### Slide 21 — Dampak · 0:45 · *[11:20]*
-> "Murid terlatih berpikir kritis dan partisipasinya terekam di Peta Jejak. Saya sebagai guru bisa mendampingi lebih tepat sasaran, bahkan saat murid melanjutkan di rumah, dan merefleksi berdasarkan data, bukan perasaan. Rekan guru pun terinspirasi membuat media sesuai kebutuhan muridnya."
+### Slide 21 — Dampak · 0:35 · *[11:10]*
+> "Murid terlatih berpikir kritis dan partisipasinya terekam di Peta Jejak. Saya sebagai guru bisa mendampingi lebih tepat sasaran, bahkan saat murid melanjutkan di rumah, dan merefleksi berdasarkan data, bukan perasaan."
 
-### Slide 22 — Angket & tes kelas 7D · 0:50 · *[12:05]*
+### Slide 22 — Dampak meluas ke sekolah lain · 0:35 · *[11:45]*
+> "Dampaknya tidak berhenti di kelas saya. Setelah saya bagikan kepada guru IPA Zona 1, NalarSTEM kini dipakai guru IPA SMPN 2 Situbondo dan SMPN 1 Panji, bahkan SDN 2 Tribungan memakainya untuk kokurikuler. Pengawas pembina pun memberi apresiasi sekaligus masukan untuk pengembangannya."
+> *(sebut nama sekolah sambil menunjuk fotonya)*
+
+### Slide 23 — Angket & tes kelas 7D · 0:50 · *[12:20]*
 > "Hasilnya di kelas 7D: rata-rata tes naik dari **41 menjadi 83**. Angket murid menunjukkan partisipasi dan kebiasaan berpikir kritis sama-sama naik, dan murid menilai aplikasinya baik."
 > *(jeda 2 detik setelah menyebut 41 → 83)*
 
-### Slide 23 — Faktor & kendala · 0:35 · *[12:55]*
+### Slide 24 — Faktor & kendala · 0:35 · *[13:10]*
 > "Kunci keberhasilannya: AI dijadikan rekan berpikir, bukan mesin pencari jawaban. Kendalanya jujur saya akui: Kak Nala paling optimal dengan internet, dan kuota Gemini gratis terbatas. Karena itu kami siapkan memori yang dikurasi guru agar tetap berjalan saat AI tidak tersedia."
 
-### Slide 24 — Tut wuri handayani · 0:30 · *[13:30]*
+### Slide 25 — Tut wuri handayani · 0:25 · *[13:45]*
 > "Filosofinya sederhana: tut wuri handayani di zaman AI. Murid berjalan di depan dengan nalarnya sendiri, sedangkan guru dan teknologi mendorong dari belakang sambil memberi arah."
 
 ---
 
 ## PENUTUP (± 45 detik)
 
-### Slide 25 — Penutup · 0:45 · *[14:00]*
+### Slide 26 — Penutup · 0:45 · *[14:10]*
 > "Bapak dan Ibu, di awal tadi saya bertanya: kapan terakhir kali murid kita bertanya kepada AI?
 > Mulai hari ini, semoga pertanyaannya berubah: **kapan terakhir kali AI membuat murid kita bertanya balik?**
 > Ketika semua murid sibuk berpikir, kelas pun menjadi lebih tertib dengan sendirinya.
 > NalarSTEM gratis, silakan pindai kodenya dan coba besok pagi di kelas Bapak dan Ibu. Terima kasih."
 > *(senyum, diam, tunggu tepuk tangan)*
-> **Selesai ± 14:45**
+> **Selesai ± 14:55**
 
 ---
 

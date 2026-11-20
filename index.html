@@ -94,9 +94,9 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 @keyframes wipe{0%{clip-path:circle(0% at 82% 50%)}45%,55%{clip-path:circle(150% at 82% 50%)}100%{clip-path:circle(0% at 18% 50%)}}
 
 /* ===== sampul ===== */
-.cover .bgimg{position:absolute;inset:0}
-.cover .bgimg img{width:100%;height:100%;object-fit:cover;object-position:70% 40%}
-.cover .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,248,248,.97) 0%,rgba(244,248,248,.93) 45%,rgba(244,248,248,0) 66%)}
+.cover .bgimg{position:absolute;top:0;bottom:0;right:0;left:46%}
+.cover .bgimg img{width:100%;height:100%;object-fit:cover;object-position:40% 40%}
+.cover .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,248,248,.97) 0%,rgba(244,248,248,.93) 48%,rgba(244,248,248,0) 62%)}
 .cover .box{position:absolute;left:110px;top:170px;width:900px}
 .cover h1{font-size:62px;line-height:1.12;font-weight:800;letter-spacing:-.02em;margin:34px 0 30px}
 .cover h1 b{color:var(--teal)}
@@ -324,6 +324,11 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .s19 li{font-size:25px;line-height:1.4;margin:0 0 8px 28px}
 .s19 .dash{position:absolute;right:0;top:0;width:820px;height:620px}
 .s19 .dash img{object-fit:contain;background:#fff}
+.s19b .grid{position:absolute;left:0;top:0;width:1346px;height:670px;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:18px}
+.s19b .foto{position:relative}
+.s19b .tag{top:auto;bottom:14px;left:14px;font-size:19px;padding:7px 16px}
+.s19b .tegak{position:absolute;right:0;top:0;width:330px;height:670px}
+.s19b .tegak .tag{right:14px;border-radius:18px;line-height:1.3}
 
 /* ===== slide 20 ===== */
 .s20 .chart{position:absolute;left:0;top:-10px;width:1160px;height:650px;padding:30px 40px}
@@ -554,7 +559,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 
   <!-- 7 T -->
   <section class="sl div" data-star="T" data-chrome="dark" data-wipe data-notes="[04:20 · 0:10] &quot;Ada tiga tantangan yang harus saya jawab.&quot;">
-    <div class="ph a" style="--d:.5s"><img src="assets/tantangan.jpg" alt=""></div>
+    <div class="ph a" style="--d:.5s"><img src="assets/tantangan.jpg" alt="" style="object-position:62% 50%"></div>
     <div class="big a pop" style="--d:.7s">T</div>
     <h2 class="a lf" style="--d:1s">Tantangan</h2>
     <p class="a up" style="--d:1.3s">Tiga hal yang harus saya jawab agar setiap murid berpikir dan terlibat.</p>
@@ -706,7 +711,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 17 AKSI 5 -->
-  <section class="sl s17" data-star="A" data-notes="[10:35 · 0:35] &quot;Praktik ini saya bagikan kepada rekan sejawat dan MGMP IPA Kabupaten Situbondo. NalarSTEM gratis, bisa diakses di mana saja, dan tetap berjalan saat sinyal lemah.&quot;">
+  <section class="sl s17" data-star="A" data-notes="[10:35 · 0:25] &quot;Praktik ini saya bagikan kepada rekan sejawat dan MGMP IPA Kabupaten Situbondo. NalarSTEM gratis dan tetap berjalan saat sinyal lemah.&quot;">
     <h2 class="tt a up"><small>Aksi 5</small>Berbagi kepada rekan guru</h2>
     <div class="body">
       <div class="rk2">
@@ -725,7 +730,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 18 R -->
-  <section class="sl div" data-star="R" data-chrome="dark" data-wipe data-notes="[11:10 · 0:10] &quot;Lalu, apa yang berubah?&quot;">
+  <section class="sl div" data-star="R" data-chrome="dark" data-wipe data-notes="[11:00 · 0:10] &quot;Lalu, apa yang berubah?&quot;">
     <div class="ph a" style="--d:.5s"><img src="assets/refleksi.jpg" alt=""></div>
     <div class="big a pop" style="--d:.7s">R</div>
     <h2 class="a lf" style="--d:1s;font-size:74px;top:500px">Refleksi &amp; Dampak</h2>
@@ -734,7 +739,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 19 DAMPAK -->
-  <section class="sl s19" data-star="R" data-notes="[11:20 · 0:45] &quot;Murid terlatih berpikir kritis dan partisipasinya terekam di Peta Jejak. Saya sebagai guru bisa mendampingi lebih tepat sasaran, bahkan saat murid melanjutkan di rumah, dan merefleksi berdasarkan data, bukan perasaan. Rekan guru pun terinspirasi membuat media sesuai kebutuhan muridnya.&quot;">
+  <section class="sl s19" data-star="R" data-notes="[11:10 · 0:35] &quot;Murid terlatih berpikir kritis dan partisipasinya terekam di Peta Jejak. Saya sebagai guru bisa mendampingi lebih tepat sasaran, bahkan saat murid melanjutkan di rumah, dan merefleksi berdasarkan data, bukan perasaan.&quot;">
     <h2 class="tt a up"><small>Refleksi &amp; Dampak</small>Dampak yang terlihat</h2>
     <div class="body">
       <div class="grp">
@@ -746,8 +751,27 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
     </div>
   </section>
 
+  <!-- 19b DAMPAK MELUAS -->
+  <section class="sl s19b" data-star="R" data-notes="[11:45 · 0:35] &quot;Dampaknya tidak berhenti di kelas saya. Setelah saya bagikan kepada guru IPA Zona 1, NalarSTEM kini dipakai guru IPA SMPN 2 Situbondo dan SMPN 1 Panji, bahkan SDN 2 Tribungan memakainya untuk kokurikuler. Pengawas pembina pun memberi apresiasi sekaligus masukan untuk pengembangannya.&quot;">
+    <h2 class="tt a up"><small>Refleksi &amp; Dampak</small>Dampak meluas ke rekan guru dan sekolah lain</h2>
+    <div class="body">
+      <div class="grid">
+        <div class="foto a zm kb" style="--d:0.30s"><img src="assets/dampak-1.jpg" alt="Berbagi ke guru IPA Zona 1"><span class="tag">Berbagi ke guru IPA Zona 1</span></div>
+        <div class="foto a zm kb" style="--d:0.45s"><img src="assets/dampak-2.jpg" alt="Berbagi ke guru IPA Zona 1"><span class="tag">Berbagi ke guru IPA Zona 1</span></div>
+        <div class="foto a zm kb" style="--d:0.60s"><img src="assets/dampak-3.jpg" alt="Guru IPA SMPN 2 Situbondo"><span class="tag">Guru IPA SMPN 2 Situbondo</span></div>
+        <div class="foto a zm kb" style="--d:0.75s"><img src="assets/dampak-4.jpg" alt="Guru IPA SMPN 2 Situbondo"><span class="tag">Guru IPA SMPN 2 Situbondo</span></div>
+        <div class="foto a zm kb" style="--d:0.90s"><img src="assets/dampak-5.jpg" alt="Guru IPA SMPN 2 Situbondo"><span class="tag">Guru IPA SMPN 2 Situbondo</span></div>
+        <div class="foto a zm kb" style="--d:1.05s"><img src="assets/dampak-6.jpg" alt="Guru IPA SMPN 1 Panji"><span class="tag">Guru IPA SMPN 1 Panji</span></div>
+        <div class="foto a zm kb" style="--d:1.20s"><img src="assets/dampak-7.jpg" alt="Guru IPA SMPN 1 Panji"><span class="tag">Guru IPA SMPN 1 Panji</span></div>
+        <div class="foto a zm kb" style="--d:1.35s"><img src="assets/dampak-8.jpg" alt="SDN 2 Tribungan (kokurikuler)"><span class="tag">SDN 2 Tribungan (kokurikuler)</span></div>
+        <div class="foto a zm kb" style="--d:1.50s"><img src="assets/dampak-9.jpg" alt="SDN 2 Tribungan (kokurikuler)"><span class="tag">SDN 2 Tribungan (kokurikuler)</span></div>
+      </div>
+      <div class="foto tegak a rt kb" style="--d:1.75s"><img src="assets/dampak-10.jpg" alt="Apresiasi dan masukan pengawas pembina"><span class="tag">Apresiasi &amp; masukan pengawas pembina</span></div>
+    </div>
+  </section>
+
   <!-- 20 ANGKET -->
-  <section class="sl s20" data-star="R" data-dur="11" data-notes="[12:05 · 0:50] &quot;Hasilnya di kelas 7D: rata-rata tes naik dari 41 menjadi 83. Angket murid menunjukkan partisipasi dan kebiasaan berpikir kritis sama-sama naik, dan murid menilai aplikasinya baik.&quot; (jeda 2 detik setelah menyebut 41 → 83)">
+  <section class="sl s20" data-star="R" data-dur="11" data-notes="[12:20 · 0:50] &quot;Hasilnya di kelas 7D: rata-rata tes naik dari 41 menjadi 83. Angket murid menunjukkan partisipasi dan kebiasaan berpikir kritis sama-sama naik, dan murid menilai aplikasinya baik.&quot; (jeda 2 detik setelah menyebut 41 → 83)">
     <h2 class="tt a up"><small>Refleksi &amp; Dampak</small>Angket murid kelas 7D: sebelum dan sesudah</h2>
     <div class="body">
       <div class="card chart a zm" style="--d:.2s">
@@ -767,7 +791,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 21 FAKTOR & KENDALA -->
-  <section class="sl" data-star="R" data-notes="[12:55 · 0:35] &quot;Kunci keberhasilannya: AI dijadikan rekan berpikir, bukan mesin pencari jawaban. Kendalanya jujur saya akui: Kak Nala paling optimal dengan internet, dan kuota Gemini gratis terbatas. Karena itu kami siapkan memori yang dikurasi guru agar tetap berjalan saat AI tidak tersedia.&quot;">
+  <section class="sl" data-star="R" data-notes="[13:10 · 0:35] &quot;Kunci keberhasilannya: AI dijadikan rekan berpikir, bukan mesin pencari jawaban. Kendalanya jujur saya akui: Kak Nala paling optimal dengan internet, dan kuota Gemini gratis terbatas. Karena itu kami siapkan memori yang dikurasi guru agar tetap berjalan saat AI tidak tersedia.&quot;">
     <h2 class="tt a up"><small>Refleksi &amp; Dampak</small>Faktor keberhasilan dan kendala</h2>
     <div class="body">
       <div class="fk2">
@@ -782,7 +806,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 22 TUT WURI -->
-  <section class="sl s22" data-star="R" data-notes="[13:30 · 0:30] &quot;Filosofinya sederhana: tut wuri handayani di zaman AI. Murid berjalan di depan dengan nalarnya sendiri, sedangkan guru dan teknologi mendorong dari belakang sambil memberi arah.&quot;">
+  <section class="sl s22" data-star="R" data-notes="[13:45 · 0:25] &quot;Filosofinya sederhana: tut wuri handayani di zaman AI. Murid berjalan di depan dengan nalarnya sendiri, sedangkan guru dan teknologi mendorong dari belakang sambil memberi arah.&quot;">
     <div class="q a pop" style="--d:.2s">“</div>
     <h2 class="a up" style="--d:.5s"><b>Tut wuri handayani</b><br>di zaman AI</h2>
     <p data-type="1300">Murid berjalan di depan dengan nalarnya sendiri, sedangkan guru dan teknologi mendorong dari belakang sambil memberi arah.</p>
@@ -792,7 +816,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   </section>
 
   <!-- 23 PENUTUP -->
-  <section class="sl end" data-chrome="hide" data-dur="14" data-notes="[14:00 · 0:45] &quot;Bapak dan Ibu, di awal tadi saya bertanya: kapan terakhir kali murid kita bertanya kepada AI? Mulai hari ini, semoga pertanyaannya berubah: kapan terakhir kali AI membuat murid kita bertanya balik? Ketika semua murid sibuk berpikir, kelas pun menjadi lebih tertib dengan sendirinya. NalarSTEM gratis, silakan pindai kodenya dan coba besok pagi di kelas Bapak dan Ibu. Terima kasih.&quot; (senyum, diam, tunggu tepuk tangan) Selesai ± 14:45">
+  <section class="sl end" data-chrome="hide" data-dur="14" data-notes="[14:10 · 0:45] &quot;Bapak dan Ibu, di awal tadi saya bertanya: kapan terakhir kali murid kita bertanya kepada AI? Mulai hari ini, semoga pertanyaannya berubah: kapan terakhir kali AI membuat murid kita bertanya balik? Ketika semua murid sibuk berpikir, kelas pun menjadi lebih tertib dengan sendirinya. NalarSTEM gratis, silakan pindai kodenya dan coba besok pagi di kelas Bapak dan Ibu. Terima kasih.&quot; (senyum, diam, tunggu tepuk tangan) Selesai ± 14:55">
     <div class="sky a bl"><img src="assets/langit.jpg" alt=""></div>
     <div class="asap"><i></i><i></i><i></i></div>
     <img class="rk" src="assets/roket.png" alt="">
